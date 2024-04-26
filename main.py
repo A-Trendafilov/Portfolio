@@ -10,10 +10,11 @@ load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 EMAIL = os.getenv("EMAIL")
 PASSWORD = os.getenv("PASSWORD")
+REDIS_URL = os.getenv("REDIS_URL")
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv(SECRET_KEY)
-app.config["CELERY_BROKER_URL"] = "redis://red-colo7ki0si5c73f5pim0:6379"
+app.config["CELERY_BROKER_URL"] = REDIS_URL
 celery = Celery(app.name, broker=app.config["CELERY_BROKER_URL"])
 
 birthday = datetime(1987, 6, 22)
