@@ -4,19 +4,14 @@ from datetime import datetime
 
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, redirect, url_for
-from celery import Celery
 
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 EMAIL = os.getenv("EMAIL")
 PASSWORD = os.getenv("PASSWORD")
-REDIS_URL = os.getenv("REDIS_URL")
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv(SECRET_KEY)
-app.config["CELERY_BROKER_URL"] = REDIS_URL
-celery = Celery(app.name, broker=app.config["CELERY_BROKER_URL"])
-
 birthday = datetime(1987, 6, 22)
 
 
@@ -33,24 +28,18 @@ def calculate_age(birthday_date):
     return age
 
 
-@celery.task
 def send_email(name, email, subject, message):
     email_message = (
         f"Subject:{subject}\n\nName: {name}\nEmail: {email}\nMessage:{message}"
     )
-    try:
-        with smtplib.SMTP("smtp.gmail.com") as connection:
-            connection.starttls()
-            connection.login(EMAIL, PASSWORD)
-            connection.sendmail(
-                from_addr=EMAIL,
-                to_addrs=EMAIL,
-                msg=email_message.encode("utf-8"),
-            )
-        return True
-    except Exception as e:
-        print(f"Error sending email: {e}")
-    return False
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(EMAIL, PASSWORD)
+        connection.sendmail(
+            from_addr=EMAIL,
+            to_addrs=EMAIL,
+            msg=email_message.encode("utf-8"),
+        )
 
 
 @app.route("/")
@@ -63,7 +52,7 @@ def home():
 def contact():
     if request.method == "POST":
         form_data = request.form
-        send_email.delay(
+        send_email(
             form_data["name"],
             form_data["email"],
             form_data["subject"],
