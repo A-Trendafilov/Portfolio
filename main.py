@@ -50,7 +50,10 @@ def home():
 
 @app.route("/portfolio/<int:pf_id>")
 def portfolio(pf_id):
-    return render_template(f"portfolio/portfolio-details-{pf_id}.html")
+    pf_title = request.args.get("pf_title")
+    return render_template(
+        f"portfolio/portfolio-details-{pf_id}.html", pf_title=pf_title
+    )
 
 
 @app.route("/contact", methods=["POST"])
