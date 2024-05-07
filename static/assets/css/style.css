@@ -567,6 +567,7 @@ section {
 }
 
 .portfolio .portfolio-wrap {
+  height: 220px;
   transition: 0.3s;
   position: relative;
   overflow: hidden;
@@ -604,7 +605,7 @@ section {
   text-align: center;
   background: rgba(20, 157, 221, 0.75);
   transition: 0.3s;
-  width: 50%;
+  width: 100%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
@@ -626,6 +627,19 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
   bottom: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-icons {
+  display: block;
+  text-align: center;
+  font-size: 44px;
+  color: #149ddd;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  text-align: center; /* Center-align text */
 }
 
 /*--------------------------------------------------------------

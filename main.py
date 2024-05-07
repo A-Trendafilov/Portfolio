@@ -48,6 +48,11 @@ def home():
     return render_template("index.html", current_age=age)
 
 
+@app.route("/portfolio/<int:pf_id>")
+def portfolio(pf_id):
+    return render_template(f"portfolio/portfolio-details-{pf_id}.html")
+
+
 @app.route("/contact", methods=["POST"])
 def contact():
     if request.method == "POST":
