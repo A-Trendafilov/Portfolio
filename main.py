@@ -3,7 +3,7 @@ import smtplib
 from datetime import datetime
 
 from dotenv import load_dotenv
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -70,4 +70,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

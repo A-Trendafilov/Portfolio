@@ -234,9 +234,11 @@
 
       <div class="section-title">
         <h2>Resume</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-          fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p> My journey began in the manufacturing industry, where I honed my skills in project management and quality
+          control. However, my heart beats for the ever-evolving world of technology. Currently on the path to becoming
+          a software developer, I am captivated by the endless possibilities that Python programming offers. I embrace
+          challenges with open arms, fueled by a passion for learning and a commitment to excellence. I am dedicated to
+          crafting innovative solutions that make a difference and propel projects toward success.</p>
       </div>
 
       <div class="row">
@@ -246,7 +248,7 @@
             <h4>Angel Trendafilov</h4>
             <p><em>Motivated and enthusiastic individual with a background in project management and quality
               control within the manufacturing industry.
-              Currently studying to become a software developer with a focus on Python programming.
+              Currently, studying to become a software developer with a focus on Python programming.
               Strong problem-solving skills and a passion for learning new technologies.
               Dedicated to delivering high-quality solutions and driving project success.</em></p>
             <ul>
@@ -274,7 +276,7 @@
           <div class="resume-item">
             <h4>Bachelor: Mechanical engineering and technology</h4>
             <h5>2007 - 2010</h5>
-            <p><em>Technical University University, Plovdiv, Bulgaria</em></p>
+            <p><em>Technical University, Plovdiv, Bulgaria</em></p>
             <p>Completed only two semesters</p>
           </div>
         </div>
@@ -316,7 +318,8 @@
 
       <div class="section-title">
         <h2>Portfolio</h2>
-        <p>Within this portfolio, I'm excited to share some of the simple projects I've been working on as I embark on
+        <p>Within this portfolio, I'm excited to share some of the simple projects I've been working on as I
+          embark on
           my journey as a Python developer.</p>
       </div>
 
@@ -325,7 +328,7 @@
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-script">Script</li>
+            <li data-filter=".filter-scr">Scr</li>
             <li data-filter=".filter-web">Web</li>
           </ul>
         </div>
@@ -333,14 +336,14 @@
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-script">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-scr">
           <div class="portfolio-wrap">
             <div class="portfolio-icons">
               <i class='bx bxl-python'></i>
             </div>
             <div class="portfolio-info">
               <h4>Morse Code Encryption</h4>
-              <p>This Python script converts messages into Morse code.</p>
+              <p><em>This Python script converts messages into Morse code.</em></p>
               <div class="portfolio-links">
                 <a href="{{ url_for('portfolio', pf_id=1, pf_title='Morse Code Encryption')}}"
                    class="portfolio-details-lightbox"
@@ -358,7 +361,8 @@
             </div>
             <div class="portfolio-info">
               <h4>Password Manager</h4>
-              <p>Python Tkinter code for a password manager with generation, storage, and retrieval functions.</p>
+              <p><em>Python Tkinter code for a password manager with generation, storage, and retrieval
+                functions.</em></p>
               <div class="portfolio-links">
                 <a href="{{ url_for('portfolio', pf_id=2, pf_title='Password Manager') }}"
                    class="portfolio-details-lightbox"
@@ -369,34 +373,40 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-icons">
+              <i class='bx bxl-python'></i>
+              <i class='bx bxl-flask'></i>
+              <i class='bx bxl-bootstrap'></i>
+              <i class='bx bxs-data'></i>
+            </div>
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
+              <h4>Simple Blog</h4>
+              <p>Blog platform with user authentication, post management, commenting, and email notification.</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                   class="portfolio-lightbox"
-                   title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                <a href="{{ url_for('portfolio', pf_id=3, pf_title='Simple Blog') }}"
+                   class="portfolio-details-lightbox" data-glightbox="type: external"
                    title="Portfolio Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-script">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-icons">
+              <i class='bx bxl-python'></i>
+              <i class='bx bxl-flask'></i>
+              <i class='bx bxl-bootstrap'></i>
+              <i class='bx bxs-data'></i>
+            </div>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Cafe Finder API</h4>
+              <p>Easily manage cafe data with RESTful principles.</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                   class="portfolio-lightbox"
-                   title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external"
+                <a href="{{ url_for('portfolio', pf_id=4, pf_title='Cafe Finder API') }}"
+                   class="portfolio-details-lightbox" data-glightbox="type: external"
                    title="Portfolio Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
@@ -437,7 +447,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-script">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-scr">
           <div class="portfolio-wrap">
             <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -454,7 +464,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-script">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-scr">
           <div class="portfolio-wrap">
             <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -509,7 +519,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
           <div class="icon"><i class="bi bi-filetype-py"></i></div>
-          <h4 class="title"><a href="">Python Scripting and Automation</a></h4>
+          <h4 class="title"><a href="" onclick="return false;">Python Scripting and Automation</a></h4>
           <p class="description">Harness the power of Python to automate repetitive tasks, streamline
             workflows, and boost productivity.
             From simple scripts to complex automation solutions,
@@ -517,7 +527,7 @@
         </div>
         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
           <div class="icon"><i class="bi bi-code-slash"></i></div>
-          <h4 class="title"><a href="">Web Development</a></h4>
+          <h4 class="title"><a href="" onclick="return false;">Web Development</a></h4>
           <p class="description">Need a professional website or web application? I specialize in front-end and
             back-end web development using the latest technologies and frameworks. Whether you need a simple
             landing page, a dynamic web application, or an e-commerce platform, I can turn your vision into
@@ -525,28 +535,28 @@
         </div>
         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
           <div class="icon"><i class="bi bi-graph-up"></i></div>
-          <h4 class="title"><a href="">Data Science and Analysis</a></h4>
+          <h4 class="title"><a href="" onclick="return false;">Data Science and Analysis</a></h4>
           <p class="description">Unlock valuable insights from your data with advanced data science and
             analysis techniques. Using tools like Pandas, NumPy, Matplotlib, and Scikit-learn, I can help
             you extract actionable insights and make data-driven decisions.</p>
         </div>
         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
           <div class="icon"><i class="bi bi-binoculars"></i></div>
-          <h4 class="title"><a href="">Web Scraping and Data Collection</a></h4>
+          <h4 class="title"><a href="" onclick="return false;">Web Scraping and Data Collection</a></h4>
           <p class="description">Gather valuable data from the web with my web scraping services. I use
             powerful tools like Beautiful Soup and Selenium WebDriver to extract and organize data from
             websites, allowing you to gain a competitive edge and stay ahead of the curve.</p>
         </div>
         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
           <div class="icon"><i class="bi bi-database-check"></i></div>
-          <h4 class="title"><a href="">Database Management and Integration</a></h4>
+          <h4 class="title"><a href="" onclick="return false;">Database Management and Integration</a></h4>
           <p class="description">Manage your data effectively with my database management and integration
             services. Whether you need help designing a database schema, optimizing query performance, or
             integrating databases into your applications, I've got the expertise to help you succeed.</p>
         </div>
         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
           <div class="icon"><i class="bi bi-git"></i></div>
-          <h4 class="title"><a href="">Git and Version Control</a></h4>
+          <h4 class="title"><a href="" onclick="return false;">Git and Version Control</a></h4>
           <p class="description">Collaborate with confidence using Git and GitHub. I provide training and
             support in version control best practices, helping you manage code changes, track progress, and
             collaborate effectively with your team.</p>
@@ -663,7 +673,7 @@
       <div class="section-title">
         <h2>Contact</h2>
         <p>Have a question or just want to say hello? Feel free to get in touch using the contact form below.
-          I'll do my best to get back to you as soon as possible..</p>
+          I'll do my best to get back to you as soon as possible.</p>
       </div>
 
       <div class="row" data-aos="fade-in">
