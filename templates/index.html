@@ -36,8 +36,6 @@
               <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong>
                   <span>22 June 1987</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
-                  <span>www.example.com</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong>
                   <span>+359 883 335 367</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>City:</strong>
@@ -465,6 +463,23 @@
           </div>
         </div>
 
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <div class="portfolio-icons">
+              <i class='bx bxl-python'></i>
+            </div>
+            <div class="portfolio-info">
+              <h4>Breakout Game</h4>
+              <p>Bounce, break, score! Control the paddle, clear the bricks.</p>
+              <div class="portfolio-links">
+                <a href="{{ url_for('portfolio', pf_id=8, pf_title='Breakout Game') }}"
+                   class="portfolio-details-lightbox" data-glightbox="type: external"
+                   title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -693,15 +708,6 @@
               <textarea class="form-control" name="message" rows="10" required></textarea>
             </div>
             <div class="my-3">
-              {% with messages = get_flashed_messages(with_categories=true) %}
-              {% if messages %}
-              {% for category, message in messages %}
-              <div class="alert alert-{{ category }}" role="alert">
-                {{ message }}
-              </div>
-              {% endfor %}
-              {% endif %}
-              {% endwith %}
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
