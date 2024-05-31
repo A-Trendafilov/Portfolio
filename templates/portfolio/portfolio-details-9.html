@@ -1,0 +1,81 @@
+{% include "header.html" %}
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>{{ pf_title }}</h2>
+        <ol>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li>{{ pf_title }}</li>
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-slide">
+                <img
+                    src="{{ url_for('static', filename='assets/img/portfolio/coffe_venue/coffe_venue_1.png') }}"
+                    alt="Coffe Venue Screenshot 1">
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                    src="{{ url_for('static', filename='assets/img/portfolio/coffe_venue/coffe_venue_2.png') }}"
+                    alt="Coffe Venue Screenshot 2">
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                    src="{{ url_for('static', filename='assets/img/portfolio/coffe_venue/coffe_venue_3.png') }}"
+                    alt="Coffe Venue Screenshot 3">
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Web Application</li>
+              <li><strong>Technologies</strong>: Python, Flask, SQLAlchemy, Google Map API</li>
+              <li><strong>Project date</strong>: 27 May, 2024</li>
+              <li><strong>Project URL</strong>: <a
+                  href="https://github.com/A-Trendafilov/Coffe-Venues-Web-App">View on GitHub</a>
+              </li>
+            </ul>
+          </div>
+          <div class="portfolio-description">
+            <h2>Coffe Venues Web Application</h2>
+            <p>
+              Explore the world of coffee with this interactive web application. Discover new coffee spots, add your
+              favorites to the gallery, and share your coffee adventures with others. Powered by Flask and Google Maps
+              API, this project showcases my skills in web development and showcases my passion for both coding and
+              coffee culture.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
+{% include "footer.html" %}
