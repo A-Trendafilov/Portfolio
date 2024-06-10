@@ -1,0 +1,82 @@
+{% include "header.html" %}
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>{{ pf_title }}</h2>
+        <ol>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li>{{ pf_title }}</li>
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-slide">
+                <img
+                    src="{{ url_for('static', filename='assets/img/portfolio/todo/todo_1.png') }}"
+                    alt="Todo List Screenshot 1">
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                    src="{{ url_for('static', filename='assets/img/portfolio/todo/todo_2.png') }}"
+                    alt="Todo List Screenshot 2">
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                    src="{{ url_for('static', filename='assets/img/portfolio/todo/todo_3.png') }}"
+                    alt="Todo List Screenshot 3">
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Web Application</li>
+              <li><strong>Technologies</strong>: Python, Flask, SQLAlchemy, Bootstrap</li>
+              <li><strong>Project date</strong>: 31 May, 2024</li>
+              <li><strong>Project URL</strong>: <a
+                  href="https://github.com/A-Trendafilov/Coffee-Venues-Web-App">View on GitHub</a>
+              </li>
+            </ul>
+          </div>
+          <div class="portfolio-description">
+            <h2>TOTO List Web Application</h2>
+            <p>
+              The TODO List is a web application designed to streamline task management. Built with Flask,
+              SQLite, and Bootstrap, it allows users to register and log in, create and manage tasks, and update their
+              profiles. Key features include task creation, editing, and completion, along with password management and
+              responsive design. Ideal for anyone looking to efficiently organize their daily tasks and projects in a
+              user-friendly interface.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
+{% include "footer.html" %}
