@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <h4 class="alert-heading">
+      <i class="bi bi-exclamation-octagon-fill"></i>
+      {{ error_description }} , {{ error_code }}
+    </h4>
+    <p>{{ error_message | safe }}</p>
+    <hr>
+    <p class="mb-0">If you need assistance, please <a href="mailto:aatrendafilov@gmail.com">contact us</a> or return
+      to the <a href="{{ url_for('home') }}">homepage</a>.</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>
+{% endblock %}
