@@ -1,9 +1,10 @@
-{% include "header.html" %}
+{% extends "base.html" %}
+{% block content %}
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
   <div class="hero-container" data-aos="fade-in">
-    <h1>Angel Trendafilov</h1>
-    <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
+    <h1>{{ data.name }}</h1>
+    <p>I'm <span class="typed" data-typed-items="{{ data.typedItems | join(', ') }}"></span></p>
   </div>
 </section><!-- End Hero -->
 
@@ -15,31 +16,27 @@
 
       <div class="section-title">
         <h2>About</h2>
-        <p>Hi there! I'm Angel, a technology enthusiast with a passion for problem-solving and creativity.
-          I specialize in Python programming, web development, and data science, and I love exploring new
-          technologies and learning new skills.</p>
+        <p>{{ data.about.intro }}</p>
       </div>
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="{{url_for('static', filename='assets/img/profile-img.jpg')}}" class="img-fluid" alt="">
+          <img src="{{url_for('static', filename=data.about.profileImg)}}" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <h3>Software Developer.</h3>
           <p class="fst-italic">
-            From Python scripting to web development and data analysis, I offer a range of services to meet
-            your needs. Whether you need a custom script, a website, or help with data analysis, I've got
-            you covered.
+            {{ data.about.dev_intro }}
           </p>
           <div class="row">
             <div class="col-lg-6">
               <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong>
-                  <span>22 June 1987</span></li>
+                  <span>{{data.about.details.birthday}}</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong>
-                  <span>+359 883 335 367</span></li>
+                  <span>{{data.about.details.phone}}</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>City:</strong>
-                  <span>Kuklen, Bulgaria</span></li>
+                  <span>{{data.about.details.city}}, {{ data.about.details.country }}</span></li>
               </ul>
             </div>
             <div class="col-lg-6">
@@ -47,19 +44,16 @@
                 <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong>
                   <span>{{ current_age }} </span>
                 </li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>aatrendafilov@gmail.com</span>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                  <span>{{data.about.details.email}}</span>
                 </li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
-                  <span>Available</span></li>
+                  <span>{{data.about.details.freelance}}</span></li>
               </ul>
             </div>
           </div>
           <p>
-            I'm a software developer on a mission to build cool stuff with code. With my skills in Python,
-            I'm ready to tackle any project that comes my way. I thrive on
-            problem-solving and pay close attention to detail, ensuring that my code is clean and efficient.
-            Plus, I love collaborating with others to bring ideas to life. Let's team up and create
-            something awesome together!
+            {{data.about.description}}
           </p>
         </div>
       </div>
@@ -73,47 +67,21 @@
 
       <div class="section-title">
         <h2>Exploring</h2>
-        <p>Here, I embark on exciting journeys to discover new technologies, frameworks, and methodologies in
-          the vast world of software development.</p>
+        <p>{{ data.exploring.intro }}</p>
       </div>
 
       <div class="row no-gutters">
-
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+        {% for fact in data.exploring.facts %}
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up"
+             data-aos-delay="{{ loop.index0 * 100 }}">
           <div class="count-box">
-            <i class='bx bxl-django' style="line-height: 1"></i>
-            <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1"
+            <i class='bx {{ fact.icon }}' style="line-height: 1"></i>
+            <span data-purecounter-start="0" data-purecounter-end="{{ fact.end }}" data-purecounter-duration="1"
                   class="purecounter"></span>
-            <p><strong>Django </strong>python web framework for fast, secure app building.</p>
+            <p><strong>{{ fact.name }} </strong>{{ fact.description }}</p>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="count-box">
-            <i class='bx bxl-java' style="line-height: 1"></i>
-            <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
-                  class="purecounter"></span>
-            <p><strong>Java </strong>versatile, platform-independent programming language.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-          <div class="count-box">
-            <i class='bx bxl-spring-boot' style="line-height: 1"></i>
-            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1"
-                  class="purecounter"></span>
-            <p><strong>Spring </strong>robust, widely-used Java framework.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="count-box">
-            <i class='bx bxl-javascript' style="line-height: 1"></i>
-            <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1"
-                  class="purecounter"></span>
-            <p><strong>JavaScript </strong>versatile, client-side scripting language.</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
 
     </div>
@@ -125,100 +93,33 @@
 
       <div class="section-title">
         <h2>Skills</h2>
-        <p>Proficient in Python, Flask, HTML/CSS, Git/GitHub, Pandas, and NumPy, I'm dedicated to advancing my
-          skills through ongoing learning. With a focus on problem-solving and a passion for creating
-          efficient solutions, I thrive in collaborative environments where I can contribute to innovative
-          projects.</p>
+        <p>{{ data.skills.intro }}</p>
       </div>
 
       <div class="row skills-content">
 
         <div class="col-lg-6" data-aos="fade-up">
-
+          {% for skill in data.skills.skills_list[:10] %}
           <div class="progress">
-            <span class="skill">Python 3 <i class="val">90%</i></span>
+            <span class="skill">{{ skill.name }} <i class="val">{{ skill.level }}%</i></span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.level }}" aria-valuemin="0"
                    aria-valuemax="100"></div>
             </div>
           </div>
-
-          <div class="progress">
-            <span class="skill">Flask <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                   aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">SQLite <i class="val">55%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
-                   aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Git/GitHub <i class="val">60%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                   aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">PyCharm <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                   aria-valuemax="100"></div>
-            </div>
-          </div>
-
+          {% endfor %}
         </div>
 
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
+          {% for skill in data.skills.skills_list[10:] %}
           <div class="progress">
-            <span class="skill">Selenium <i class="val">40%</i></span>
+            <span class="skill">{{ skill.name }} <i class="val">{{ skill.level }}%</i></span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.level }}" aria-valuemin="0"
                    aria-valuemax="100"></div>
             </div>
           </div>
-
-          <div class="progress">
-            <span class="skill">RESTful API <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                   aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Pandas <i class="val">55%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
-                   aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">HTML 5 <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                   aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">CSS <i class="val">45%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0"
-                   aria-valuemax="100"></div>
-            </div>
-          </div>
-
+          {% endfor %}
         </div>
 
       </div>
@@ -232,80 +133,61 @@
 
       <div class="section-title">
         <h2>Resume</h2>
-        <p> My journey began in the manufacturing industry, where I honed my skills in project management and quality
-          control. However, my heart beats for the ever-evolving world of technology. Currently on the path to becoming
-          a software developer, I am captivated by the endless possibilities that Python programming offers. I embrace
-          challenges with open arms, fueled by a passion for learning and a commitment to excellence. I am dedicated to
-          crafting innovative solutions that make a difference and propel projects toward success.</p>
+        <p>{{ data.resume.intro }}</p>
       </div>
 
       <div class="row">
         <div class="col-lg-6" data-aos="fade-up">
-          <h3 class="resume-title">Sumary</h3>
+          <h3 class="resume-title">Summary</h3>
           <div class="resume-item pb-0">
-            <h4>Angel Trendafilov</h4>
-            <p><em>Motivated and enthusiastic individual with a background in project management and quality
-              control within the manufacturing industry.
-              Currently, studying to become a software developer with a focus on Python programming.
-              Strong problem-solving skills and a passion for learning new technologies.
-              Dedicated to delivering high-quality solutions and driving project success.</em></p>
+            <h4>{{ data.name }}</h4>
+            <p><em>{{ data.resume.summary.description }}</em></p>
             <ul>
-              <li>Kuklen, Plovdiv, Bulgaria</li>
-              <li>(359) 883 335 367</li>
-              <li>aatrendafilov@gmail.com</li>
+              <li>{{ data.about.details.city }} , {{ data.about.details.country }}</li>
+              <li>{{ data.about.details.phone }}</li>
+              <li>{{ data.about.details.email }}</li>
             </ul>
           </div>
 
           <h3 class="resume-title">Education</h3>
+          {% for edu in data.resume.education %}
           <div class="resume-item">
-            <h4>Certification</h4>
-            <p>100 Days of Code: The Complete Python Pro Bootcamp</p>
-            <p><em>Udemy</em></p>
-            <p>Credential ID UC-e1b30234-1818-4385-b668-470b90679a37</p>
-            <a class="btn btn-outline-info btn-sm"
-               href="https://ude.my/UC-e1b30234-1818-4385-b668-470b90679a37" role="button">Show credential</a>
+            <h4>{{ edu.degree }}</h4>
+            {% if edu.field %}
+            <p>{{ edu.field }}</p>
+            {% endif %}
+            <p><em>{{ edu.institution }}</em></p>
+            {% if edu.credentialId %}
+            <p>Credential ID: {{ edu.credentialId }}</p>
+            <a class="btn btn-outline-info btn-sm" href="{{ edu.link }}" role="button">Show credential</a>
+            {% endif %}
+            {% if edu.years %}
+            <h5>{{ edu.years }}</h5>
+            {% endif %}
+            {% if edu.status %}
+            <p>{{ edu.status }}</p>
+            {% endif %}
           </div>
-          <div class="resume-item">
-            <h4>Bachelor of Marketing</h4>
-            <h5>2010 - 2014</h5>
-            <p><em>New Bulgarian University, Plovdiv, Bulgaria</em></p>
-            <p>Semesterly Completed</p>
-          </div>
-          <div class="resume-item">
-            <h4>Bachelor: Mechanical engineering and technology</h4>
-            <h5>2007 - 2010</h5>
-            <p><em>Technical University, Plovdiv, Bulgaria</em></p>
-            <p>Completed only two semesters</p>
-          </div>
+          {% endfor %}
         </div>
+
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
           <h3 class="resume-title">Professional Experience</h3>
+          {% for exp in data.resume.experience %}
           <div class="resume-item">
-            <h4>Quality Controller and Project Designer</h4>
-            <h5>2021 - 2024</h5>
-            <p><em>H-Retail Automation Bulgaria ltd, Kuklen, Bulgaria </em></p>
+            <h4>{{ exp.title }}</h4>
+            <h5>{{ exp.years }}</h5>
+            <p><em>{{ exp.company }}</em></p>
             <ul>
-              <li>Leading role in the design, development and implementation of projects</li>
-              <li>Design and production quality communication materials</li>
-              <li>Monitoring of quality performance in the production process</li>
+              {% for responsibility in exp.responsibilities %}
+              <li>{{ responsibility }}</li>
+              {% endfor %}
             </ul>
           </div>
-          <div class="resume-item">
-            <h4>Project manager</h4>
-            <h5>2017 - 2018</h5>
-            <p><em>Forkliftbg, Plovdiv, Bulgaria</em></p>
-            <ul>
-              <li>Designing projects for warehouse equipment</li>
-              <li>Technical drawings for projects, details, preparation of final offers to the client.
-              </li>
-              <li>Calculation of quantitative accounts for the project, communication with suppliers,
-                preparation of company documents
-              </li>
-              <li>Monitoring the quality performance of tasks by everyone involved in the process</li>
-            </ul>
-          </div>
+          {% endfor %}
         </div>
       </div>
+
 
     </div>
   </section><!-- End Resume Section -->
@@ -316,213 +198,42 @@
 
       <div class="section-title">
         <h2>Portfolio</h2>
-        <p>Within this portfolio, I'm excited to share some of the simple projects I've been working on as I
-          embark on
-          my journey as a Python developer.</p>
+        <p>{{ data.portfolio.intro }}</p>
       </div>
 
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-scr">Scr</li>
-            <li data-filter=".filter-web">Web</li>
+            <li data-filter=".filter-App">App</li>
+            <li data-filter=".filter-Scr">Scr</li>
+            <li data-filter=".filter-Web">Web</li>
           </ul>
         </div>
       </div>
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-scr">
+        {% for project in data.portfolio.projects %}
+        <div class="col-lg-4 col-md-6 portfolio-item filter-{{ project.category }}">
           <div class="portfolio-wrap">
             <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
+              {% for icon in project.icons %}
+              <i class='{{ icon }}'></i>
+              {% endfor %}
             </div>
             <div class="portfolio-info">
-              <h4>Morse Code Encryption</h4>
-              <p><em>This Python script converts messages into Morse code.</em></p>
+              <h4>{{ project.title }}</h4>
+              <p><em>{{ project.description }}</em></p>
               <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=1, pf_title='Morse Code Encryption')}}"
-                   class="portfolio-details-lightbox"
-                   data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
+                <a href="{{ url_for('portfolio', id=project.id) }}"
+                   class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i
+                    class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
-            </div>
-            <div class="portfolio-info">
-              <h4>Password Manager</h4>
-              <p><em>Python Tkinter code for a password manager with generation, storage, and retrieval
-                functions.</em></p>
-              <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=2, pf_title='Password Manager') }}"
-                   class="portfolio-details-lightbox"
-                   data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
-              <i class='bx bxl-flask'></i>
-              <i class='bx bxl-bootstrap'></i>
-              <i class='bx bxs-data'></i>
-            </div>
-            <div class="portfolio-info">
-              <h4>Simple Blog</h4>
-              <p>Blog platform with user authentication, post management, commenting, and email notification.</p>
-              <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=3, pf_title='Simple Blog') }}"
-                   class="portfolio-details-lightbox" data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
-              <i class='bx bxl-flask'></i>
-              <i class='bx bx-server'></i>
-              <i class='bx bxs-data'></i>
-            </div>
-            <div class="portfolio-info">
-              <h4>RESTFul Web</h4>
-              <p>Easily manage cafe data with RESTful principles.</p>
-              <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=4, pf_title='Cafe Finder API') }}"
-                   class="portfolio-details-lightbox" data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-scr">
-          <div class="portfolio-wrap">
-            <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
-            </div>
-            <div class="portfolio-info">
-              <h4>Tic Tac Toe</h4>
-              <p>Text-based Tic Tac Toe game in Python. Play against the computer.</p>
-              <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=5, pf_title='Tic Tac Toe') }}"
-                   class="portfolio-details-lightbox" data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
-            </div>
-            <div class="portfolio-info">
-              <h4>Watermark Editor</h4>
-              <p>A Python application built with PyQt6 for adding watermarks to images.</p>
-              <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=6, pf_title='Watermark Editor') }}"
-                   class="portfolio-details-lightbox" data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
-            </div>
-            <div class="portfolio-info">
-              <h4>Typing Speed Test</h4>
-              <p>Boost your typing speed and accuracy with my app. Test yourself against the clock and improve your
-                skills.</p>
-              <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=7, pf_title='Typing Speed Test') }}"
-                   class="portfolio-details-lightbox" data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
-            </div>
-            <div class="portfolio-info">
-              <h4>Breakout Game</h4>
-              <p>Bounce, break, score! Control the paddle, clear the bricks.</p>
-              <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=8, pf_title='Breakout Game') }}"
-                   class="portfolio-details-lightbox" data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
-              <i class='bx bxl-flask'></i>
-              <i class='bx bxl-bootstrap'></i>
-              <i class='bx bxs-data'></i>
-            </div>
-            <div class="portfolio-info">
-              <h4>Coffee Venue</h4>
-              <p>Discover new coffee spots.</p>
-              <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=9, pf_title='Coffee Venue') }}"
-                   class="portfolio-details-lightbox" data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <div class="portfolio-icons">
-              <i class='bx bxl-python'></i>
-              <i class='bx bxl-flask'></i>
-              <i class='bx bxl-bootstrap'></i>
-              <i class='bx bxs-data'></i>
-            </div>
-            <div class="portfolio-info">
-              <h4>TODO </h4>
-              <p>A web app for managing tasks. Perfect for organizing daily tasks efficiently.</p>
-              <div class="portfolio-links">
-                <a href="{{ url_for('portfolio', pf_id=10, pf_title='TODO List') }}"
-                   class="portfolio-details-lightbox" data-glightbox="type: external"
-                   title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
+        {% endfor %}
       </div>
-
     </div>
   </section><!-- End Portfolio Section -->
 
@@ -532,60 +243,18 @@
 
       <div class="section-title">
         <h2>Services</h2>
-        <p>Welcome to my portfolio! I offer a range of professional services to help you bring your projects to
-          life.
-          Whether you're a business owner, entrepreneur, or individual looking to enhance your online
-          presence,
-          I've got you covered with a diverse set of skills and expertise.</p>
+        <p>{{ data.services.intro }}</p>
       </div>
 
       <div class="row">
-        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-          <div class="icon"><i class="bi bi-filetype-py"></i></div>
-          <h4 class="title"><a href="" onclick="return false;">Python Scripting and Automation</a></h4>
-          <p class="description">Harness the power of Python to automate repetitive tasks, streamline
-            workflows, and boost productivity.
-            From simple scripts to complex automation solutions,
-            I provide tailored solutions to meet your specific needs.</p>
+        {% for service in data.services.details %}
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+          <div class="icon"><i class="{{ service.icon }}"></i></div>
+          <h4 class="title"><a href="" onclick="return false;">{{ service.title }}</a></h4>
+          <p class="description">{{ service.description }}</p>
         </div>
-        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon"><i class="bi bi-code-slash"></i></div>
-          <h4 class="title"><a href="" onclick="return false;">Web Development</a></h4>
-          <p class="description">Need a professional website or web application? I specialize in front-end and
-            back-end web development using the latest technologies and frameworks. Whether you need a simple
-            landing page, a dynamic web application, or an e-commerce platform, I can turn your vision into
-            reality.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon"><i class="bi bi-graph-up"></i></div>
-          <h4 class="title"><a href="" onclick="return false;">Data Science and Analysis</a></h4>
-          <p class="description">Unlock valuable insights from your data with advanced data science and
-            analysis techniques. Using tools like Pandas, NumPy, Matplotlib, and Scikit-learn, I can help
-            you extract actionable insights and make data-driven decisions.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon"><i class="bi bi-binoculars"></i></div>
-          <h4 class="title"><a href="" onclick="return false;">Web Scraping and Data Collection</a></h4>
-          <p class="description">Gather valuable data from the web with my web scraping services. I use
-            powerful tools like Beautiful Soup and Selenium WebDriver to extract and organize data from
-            websites, allowing you to gain a competitive edge and stay ahead of the curve.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-          <div class="icon"><i class="bi bi-database-check"></i></div>
-          <h4 class="title"><a href="" onclick="return false;">Database Management and Integration</a></h4>
-          <p class="description">Manage your data effectively with my database management and integration
-            services. Whether you need help designing a database schema, optimizing query performance, or
-            integrating databases into your applications, I've got the expertise to help you succeed.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-          <div class="icon"><i class="bi bi-git"></i></div>
-          <h4 class="title"><a href="" onclick="return false;">Git and Version Control</a></h4>
-          <p class="description">Collaborate with confidence using Git and GitHub. I provide training and
-            support in version control best practices, helping you manage code changes, track progress, and
-            collaborate effectively with your team.</p>
-        </div>
+        {% endfor %}
       </div>
-
     </div>
   </section><!-- End Services Section -->
 
@@ -596,8 +265,7 @@
 
       <div class="section-title">
         <h2>Contact</h2>
-        <p>Have a question or just want to say hello? Feel free to get in touch using the contact form below.
-          I'll do my best to get back to you as soon as possible.</p>
+        <p>{{ data.contact.intro }}</p>
       </div>
 
       <div class="row" data-aos="fade-in">
@@ -607,24 +275,24 @@
             <div class="address">
               <i class="bi bi-geo-alt"></i>
               <h4>Location:</h4>
-              <p>Plovdiv, Bulgaria</p>
+              <p>{{ data.about.details.city }}, {{ data.about.details.country }} </p>
             </div>
 
             <div class="email">
               <i class="bi bi-envelope"></i>
               <h4>Email:</h4>
-              <p>aatrendafilov@gmail.com</p>
+              <p>{{ data.about.details.email }}</p>
             </div>
 
             <div class="phone">
               <i class="bi bi-phone"></i>
               <h4>Call:</h4>
-              <p>+359 883 335 367</p>
+              <p>{{ data.about.details.phone }}</p>
             </div>
 
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47334.47096015077!2d24.723192425018592!3d42.141631523901594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd108a248763d%3A0x6470d1fa6f1338a0!2sPlovdiv!5e0!3m2!1sen!2sbg!4v1717141470102!5m2!1sen!2sbg"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                src="{{ data.contact.map }}"
+                width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
@@ -668,5 +336,5 @@
 
 </main><!-- End #main -->
 
-{% include "footer.html" %}
+{% endblock %}
 
