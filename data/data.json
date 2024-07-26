@@ -1,0 +1,525 @@
+{
+  "name": "Angel Trendafilov",
+  "typedItems": [
+    "Designer",
+    "Developer",
+    "Freelancer"
+  ],
+  "about": {
+    "intro": "Hello! I`m Angel Trendafilov, a dedicated technology enthusiast with a knack for solving complex challenges and creating innovative solutions. My expertise spans a wide range of modern tools and frameworks, allowing me to adapt and excel in diverse tech environments. I thrive on exploring new technologies and continuously enhancing my skills to deliver efficient and impactful results.",
+    "dev_intro": "From tackling technical challenges to crafting innovative solutions, I offer a range of services tailored to your needs. Whether it`s developing custom applications, designing engaging digital experiences, or providing insightful analysis, I`m here to deliver results that align with your goals.",
+    "profileImg": "assets/img/profile-img.jpg",
+    "details": {
+      "birthday": "22 June 1987",
+      "phone": "+359 883 335 367",
+      "city": "Plovdiv",
+      "country": "Bulgaria",
+      "email": "aatrendafilov@gmail.com",
+      "freelance": "Available"
+    },
+    "description": "I'm a passionate software developer dedicated to creating innovative and impactful solutions. With expertise in Python, Java, and modern web technologies, I approach each project with a commitment to problem-solving, meticulous attention to detail, and efficient, clean coding practices. I thrive in collaborative environments, turning ideas into reality. Let's join forces and create something amazing together!"
+  },
+  "exploring": {
+    "intro": "Here, I embark on exciting journeys to discover new technologies, frameworks, and methodologies in the vast world of software development.",
+    "facts": [
+      {
+        "icon": "bxl-django",
+        "end": 1,
+        "name": "Django",
+        "description": "Python web framework for fast, secure app building."
+      },
+      {
+        "icon": "bxl-java",
+        "end": 2,
+        "name": "Java",
+        "description": "Versatile, platform-independent programming language."
+      },
+      {
+        "icon": "bxl-spring-boot",
+        "end": 3,
+        "name": "Spring",
+        "description": "Robust, widely-used Java framework."
+      },
+      {
+        "icon": "bxl-javascript",
+        "end": 4,
+        "name": "JavaScript",
+        "description": "Versatile, client-side scripting language."
+      }
+    ]
+  },
+  "skills": {
+    "intro": "With a solid background in Python, Java, and modern web technologies, I am dedicated to advancing my expertise and tackling real-world challenges. My skill set includes building dynamic applications with Flask and Spring Boot, designing engaging user interfaces, and implementing scalable solutions using Docker and various databases. I thrive on learning new tools and frameworks to create impactful and efficient solutions.",
+    "skills_list": [
+      {
+        "name": "Python 3",
+        "level": 90
+      },
+      {
+        "name": "Flask",
+        "level": 80
+      },
+      {
+        "name": "SQLite",
+        "level": 55
+      },
+      {
+        "name": "Git/GitHub",
+        "level": 60
+      },
+      {
+        "name": "PyQt",
+        "level": 75
+      },
+      {
+        "name": "Selenium",
+        "level": 40
+      },
+      {
+        "name": "RESTful API",
+        "level": 90
+      },
+      {
+        "name": "Pandas",
+        "level": 55
+      },
+      {
+        "name": "HTML 5",
+        "level": 80
+      },
+      {
+        "name": "CSS",
+        "level": 45
+      },
+      {
+        "name": "Java",
+        "level": 90
+      },
+      {
+        "name": "Spring Framework 6",
+        "level": 70
+      },
+      {
+        "name": "Spring Boot 3",
+        "level": 65
+      },
+      {
+        "name": "Docker",
+        "level": 60
+      },
+      {
+        "name": "PostgreSQL",
+        "level": 70
+      },
+      {
+        "name": "Microservices",
+        "level": 65
+      },
+      {
+        "name": "Maven",
+        "level": 70
+      },
+      {
+        "name": "Amazon Web Services (AWS)",
+        "level": 55
+      },
+      {
+        "name": "Google API",
+        "level": 60
+      },
+      {
+        "name": "Object-Oriented Programming",
+        "level": 85
+      }
+    ]
+  },
+  "resume": {
+    "intro": "My journey began in the manufacturing industry, where I honed my skills in project management and quality control. However, my passion lies in the ever-evolving world of technology. Currently on the path to becoming a software developer, I am captivated by the endless possibilities that diverse technologies offer. I embrace challenges with enthusiasm, driven by a commitment to continuous learning and excellence. Dedicated to crafting innovative solutions, I strive to make a meaningful impact and drive projects to success.",
+    "summary": {
+      "description": "Motivated and innovative professional with a foundation in project management and quality control, now focused on software development. With expertise in Python, Java, and modern web technologies, I am passionate about creating impactful solutions and tackling complex challenges. Adept at leveraging a diverse skill set to drive project success and continuously learning to stay at the forefront of technology. Committed to delivering high-quality, efficient results in every endeavor."
+    },
+    "education": [
+      {
+        "degree": "Certification",
+        "field": "Java Spring Framework 6 with Spring Boot 3",
+        "institution": "Udemy",
+        "credentialId": "UC-d2c53be7-7f14-4992-b00e-f5a87e67924a",
+        "link": "https://ude.my/UC-d2c53be7-7f14-4992-b00e-f5a87e67924a"
+      },
+      {
+        "degree": "Certification",
+        "field": "100 Days of Code: The Complete Python Pro Bootcamp",
+        "institution": "Udemy",
+        "credentialId": "UC-e1b30234-1818-4385-b668-470b90679a37",
+        "link": "https://ude.my/UC-e1b30234-1818-4385-b668-470b90679a37"
+      },
+      {
+        "degree": "Bachelor of Marketing",
+        "years": "2010 - 2014",
+        "institution": "New Bulgarian University, Plovdiv, Bulgaria",
+        "status": "Semester Graduate"
+      },
+      {
+        "degree": "Bachelor: Mechanical engineering and technology",
+        "years": "2007 - 2010",
+        "institution": "Technical University, Plovdiv, Bulgaria",
+        "status": "Completed only two semesters"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Quality Controller and Project Designer",
+        "years": "Nov 2021 - Jan 2024",
+        "company": "H-Retail Automation Bulgaria Ltd., Kuklen (Bulgaria)",
+        "responsibilities": [
+          "Led the design, development, and implementation of projects, ensuring alignment with client requirements and project goals.",
+          "Designed and produced high-quality communication materials for project presentations and client interactions.",
+          "Monitored and ensured quality performance throughout the production process, addressing any issues promptly."
+        ]
+      },
+      {
+        "title": "Project manager",
+        "years": "Jul 2020 - Oct 2021",
+        "company": "Forkliftbg Ltd., Plovdiv (Bulgaria)",
+        "responsibilities": [
+          "Designed projects for warehouse equipment, including technical specifications and layouts.",
+          "Created detailed technical drawings and prepared comprehensive final offers for clients.",
+          "Calculated project quantities, communicated with suppliers, and prepared necessary company documents.",
+          "Monitored and ensured the quality and performance of tasks executed by all team members involved in the process."
+        ]
+      },
+      {
+        "title": "Project manager",
+        "years": "Nov 2018 - Jun 2020",
+        "company": "Vit 12 Ltd., Plovdiv (Bulgaria)",
+        "responsibilities": [
+          "Designed projects for warehouse equipment, including technical specifications and layouts.",
+          "Created detailed technical drawings and prepared comprehensive final offers for clients.",
+          "Calculated project quantities, communicated with suppliers, and prepared necessary company documents.",
+          "Monitored and ensured the quality and performance of tasks executed by all team members involved in the process."
+        ]
+      },
+      {
+        "title": "Technical Operations Specialist",
+        "years": "Nov 2015 - Feb 2018",
+        "company": "Carp Madness Bulgaria Ltd., Kuklen (Bulgaria)",
+        "responsibilities": [
+          "Managed inventory levels",
+          "Prepared company documents",
+          "Coordinated shipment and receipt of goods",
+          "Assembled company products"
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "intro": "In this portfolio, I`m thrilled to showcase a diverse array of projects that highlight my skills in Python, Java, web development, and more. Each project represents my dedication to innovation, problem-solving, and continuous learning as I evolve in the field of software development.",
+    "projects": [
+      {
+        "id": 1,
+        "title": "Morse Code Encryption",
+        "category": "Scr",
+        "description": "This Python script converts messages into Morse code.",
+        "icons": [
+          "bx bxl-python"
+        ],
+        "details": {
+          "detail_title": "Morse Code Encryption Program",
+          "detail_description": "This Python program allows you to encrypt messages into Morse code. It provides a simple command-line\n              interface for users to input messages and receive the corresponding Morse code output.",
+          "category": "Script",
+          "technologies": [
+            "Python"
+          ],
+          "date": "24 Apr, 2024",
+          "url": "https://github.com/A-Trendafilov/Text-to-Morse-Code-Converter",
+          "images": [
+            "assets/img/portfolio/text_to_morse/text_to_morse_1.png",
+            "assets/img/portfolio/text_to_morse/text_to_morse_2.png",
+            "assets/img/portfolio/text_to_morse/text_to_morse_3.png"
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "title": "Password Manager",
+        "category": "App",
+        "description": "Python Tkinter code for a password manager with generation, storage, and retrieval functions.",
+        "icons": [
+          "bx bxl-python"
+        ],
+        "details": {
+          "detail_title": "Password Manager Application",
+          "detail_description": "A password manager application built using Python and Tkinter GUI toolkit. It allows users to generate strong passwords, save them securely with associated website/email, and search for passwords when needed. Data is stored locally in a JSON file. The application provides a simple and intuitive user interface for managing passwords efficiently.",
+          "category": "Application",
+          "technologies": [
+            "Python",
+            "Tkinter",
+            "JSON"
+          ],
+          "date": "23 Feb, 2024",
+          "url": "https://github.com/A-Trendafilov/Password-Manager",
+          "images": [
+            "assets/img/portfolio/password_manager/password_manager_1.png",
+            "assets/img/portfolio/password_manager/password_manager_2.png",
+            "assets/img/portfolio/password_manager/password_manager_3.png"
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "title": "Simple Blog",
+        "category": "Web",
+        "description": "Blog platform with user authentication, post management, commenting, and email notification.",
+        "icons": [
+          "bx bxl-python",
+          "bx bxl-flask",
+          "bx bxl-bootstrap",
+          "bx bxs-data"
+        ],
+        "details": {
+          "detail_title": "Blog Web Application",
+          "detail_description": "A Flask-based web application featuring a blog platform. Users can register, log in, create, edit, and delete blog posts. User authentication is managed using Flask-Login. The application also supports commenting on posts. Blog posts and user data are stored in a SQLite database using Flask-SQLAlchemy. Flask-Bootstrap is used for styling, and Flask-CKEditor enables rich text editing capabilities. Additional features include gravatar image integration and email notification for contact form submissions.",
+          "category": "Web Application",
+          "technologies": [
+            "Python",
+            "Flask",
+            "SQLAlchemy"
+          ],
+          "date": "04 Apr, 2024",
+          "url": "https://github.com/A-Trendafilov/Blog",
+          "images": [
+            "assets/img/portfolio/blog/blog_1.png",
+            "assets/img/portfolio/blog/blog_2.png",
+            "assets/img/portfolio/blog/blog_3.png"
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "title": "RESTFul Web",
+        "category": "Web",
+        "description": "Easily manage cafe data with RESTful principles.",
+        "icons": [
+          "bx bxl-python",
+          "bx bxl-flask",
+          "bx bx-server",
+          "bx bxs-data"
+        ],
+        "details": {
+          "detail_title": "RESTFul Web Application",
+          "detail_description": "A web API built with Flask for managing cafes. The API allows users to retrieve information about cafes, add new cafes, update coffee prices, and report closed cafes. Cafes are stored in a SQLite database using SQLAlchemy. Endpoints include retrieving a random cafe, retrieving all cafes, searching for cafes by location, adding a new cafe, updating coffee prices, and reporting closed cafes.",
+          "category": "Wep Application",
+          "technologies": [
+            "Python",
+            "Flask",
+            "SQLAlchemy"
+          ],
+          "date": "28 Mar, 2024",
+          "url": "https://github.com/A-Trendafilov/RESTful-Routing",
+          "images": [
+            "assets/img/portfolio/restfull_api/restfull_api_1.png",
+            "assets/img/portfolio/restfull_api/restfull_api_2.png",
+            "assets/img/portfolio/restfull_api/restfull_api_3.png"
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "title": "Tic Tac Toe",
+        "category": "Scr",
+        "description": "Text-based Tic Tac Toe game in Python. Play against the computer.",
+        "icons": [
+          "bx bxl-python"
+        ],
+        "details": {
+          "detail_title": "Tic Tac Toe Game",
+          "detail_description": "A text-based implementation of the classic Tic Tac Toe game in Python. The game allows a player to play against the computer. It features a simple text-based interface, input validation, and an option for the player to exit the game at any time.",
+          "category": "Script",
+          "technologies": [
+            "Python",
+            "NumPy"
+          ],
+          "date": "08 May, 2024",
+          "url": "https://github.com/A-Trendafilov/Tic-Tac-Toe",
+          "images": [
+            "assets/img/portfolio/tic_tac_toe/tic_tac_toe_1.png",
+            "assets/img/portfolio/tic_tac_toe/tic_tac_toe_2.png",
+            "assets/img/portfolio/tic_tac_toe/tic_tac_toe_3.png"
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "title": "Watermark Editor",
+        "category": "App",
+        "description": "A Python application built with PyQt6 for adding watermarks to images.",
+        "icons": [
+          "bx bxl-python"
+        ],
+        "details": {
+          "detail_title": "Watermark Application",
+          "detail_description": "The Watermark App is a graphical application developed using PyQt6 in Python. It provides users with a simple yet powerful tool for adding watermarks to images. With features such as image uploading, text watermarking, font selection, color picking, and transparency adjustment, users can easily customize their images to protect their intellectual property or add branding elements.",
+          "category": "Application",
+          "technologies": [
+            "Python",
+            "PyQt6"
+          ],
+          "date": "10 May, 2024",
+          "url": "https://github.com/A-Trendafilov/Watermark-App",
+          "images": [
+            "assets/img/portfolio/watermark/watermark_1.png",
+            "assets/img/portfolio/watermark/watermark_2.png",
+            "assets/img/portfolio/watermark/watermark_3.png"
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "title": "Typing Speed Test",
+        "category": "App",
+        "description": "Boost your typing speed and accuracy with my app. Test yourself against the clock and improve your skills.",
+        "icons": [
+          "bx bxl-python"
+        ],
+        "details": {
+          "detail_title": "Typing Speed Test Application",
+          "detail_description": "Boost your typing speed and accuracy with our Typing Speed Test Application! Whether you're a professional typist looking to improve your productivity or a beginner aiming to enhance your typing skills, our user-friendly app is here to help. Featuring a timer, sample text, and real-time feedback on your typing speed and accuracy, our application provides an engaging and effective way to track your progress. Challenge yourself against the clock, refine your skills, and watch your typing proficiency soar. Try it now and see how fast and accurately you can type!",
+          "category": "Application",
+          "technologies": [
+            "Python",
+            "PyQt6"
+          ],
+          "date": "15 May, 2024",
+          "url": "https://github.com/A-Trendafilov/Typing-Speed-Test",
+          "images": [
+            "assets/img/portfolio/typing_speed_test/typing_speed_test_1.png",
+            "assets/img/portfolio/typing_speed_test/typing_speed_test_2.png",
+            "assets/img/portfolio/typing_speed_test/typing_speed_test_3.png"
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "title": "Breakout Game",
+        "category": "App",
+        "description": "Bounce, break, score! Control the paddle, clear the bricks.",
+        "icons": [
+          "bx bxl-python"
+        ],
+        "details": {
+          "detail_title": "Breakout Game Application",
+          "detail_description": "Breakout is an engaging arcade game where players control a paddle to bounce a ball and break bricks. With intuitive keyboard controls, vibrant graphics, and challenging levels, the goal is to clear all the bricks and achieve the highest score. Start the game with the \"Start Game\" button, move the paddle with the arrow keys, and enjoy the addictive gameplay. If needed, the \"Quit Game\" button allows for easy exit. Dive into Breakout for endless fun and test your skills in this classic brick-breaking adventure!",
+          "category": "Application",
+          "technologies": [
+            "Python",
+            "Arcade"
+          ],
+          "date": "21 May, 2024",
+          "url": "https://github.com/A-Trendafilov/Breakout-Game",
+          "images": [
+            "assets/img/portfolio/breakout_game/breakout_game_1.png",
+            "assets/img/portfolio/breakout_game/breakout_game_2.png",
+            "assets/img/portfolio/breakout_game/breakout_game_3.png"
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "title": "Coffee Venue",
+        "category": "Web",
+        "description": "Discover new coffee spots.",
+        "icons": [
+          "bx bxl-python",
+          "bx bxl-flask",
+          "bx bxl-bootstrap",
+          "bx bxs-data"
+        ],
+        "details": {
+          "detail_title": "Coffee Venues Web Application",
+          "detail_description": "Explore the world of coffee with this interactive web application. Discover new coffee spots, add your favorites to the gallery, and share your coffee adventures with others. Powered by Flask and Google Maps API, this project showcases my skills in web development and showcases my passion for both coding and coffee culture.",
+          "category": "Web Application",
+          "technologies": [
+            "Python",
+            "SQLAlchemy"
+          ],
+          "date": "27 May, 2024",
+          "url": "https://github.com/A-Trendafilov/Coffee-Venues-Web-App",
+          "images": [
+            "assets/img/portfolio/coffee_venue/coffee_venue_1.png",
+            "assets/img/portfolio/coffee_venue/coffee_venue_2.png",
+            "assets/img/portfolio/coffee_venue/coffee_venue_3.png"
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "title": "TODO",
+        "category": "Web",
+        "description": "A web app for managing tasks. Perfect for organizing daily tasks efficiently.",
+        "icons": [
+          "bx bxl-python",
+          "bx bxl-flask",
+          "bx bxl-bootstrap",
+          "bx bxs-data"
+        ],
+        "details": {
+          "detail_title": "TOTO List Web Application",
+          "detail_description": "The TODO List is a web application designed to streamline task management. Built with Flask, SQLite, and Bootstrap, it allows users to register and log in, create and manage tasks, and update their profiles. Key features include task creation, editing, and completion, along with password management and responsive design. Ideal for anyone looking to efficiently organize their daily tasks and projects in a user-friendly interface.",
+          "category": "Web Application",
+          "technologies": [
+            "Python",
+            "Flask",
+            "SQLAlchemy"
+          ],
+          "date": "31 May, 2024",
+          "url": "https://github.com/A-Trendafilov/TODO-List",
+          "images": [
+            "assets/img/portfolio/todo/todo_1.png",
+            "assets/img/portfolio/todo/todo_2.png",
+            "assets/img/portfolio/todo/todo_3.png"
+          ]
+        }
+      }
+    ]
+  },
+  "services": {
+    "intro": "Welcome to my portfolio! I offer a range of professional services to help you bring your projects to life. Whether you're a business owner, entrepreneur, or individual looking to enhance your online presence, I've got you covered with a diverse set of skills and expertise.",
+    "details": [
+      {
+        "icon": "bi bi-filetype-py",
+        "title": "Python Scripting and Automation",
+        "description": "Harness the power of Python to automate repetitive tasks, streamline workflows, and boost productivity. From simple scripts to complex automation solutions, I provide tailored solutions to meet your specific needs."
+      },
+      {
+        "icon": "bi bi-code-slash",
+        "title": "Web Development",
+        "description": "Need a professional website or web application? I specialize in front-end and back-end web development using the latest technologies and frameworks. Whether you need a simple landing page, a dynamic web application, or an e-commerce platform, I can turn your vision into reality."
+      },
+      {
+        "icon": "bi bi-graph-up",
+        "title": "Data Science and Analysis",
+        "description": "Unlock valuable insights from your data with advanced data science and analysis techniques. Using tools like Pandas, NumPy, Matplotlib, and Scikit-learn, I can help you extract actionable insights and make data-driven decisions."
+      },
+      {
+        "icon": "bi bi-binoculars",
+        "title": "Web Scraping and Data Collection",
+        "description": "Gather valuable data from the web with my web scraping services. I use powerful tools like Beautiful Soup and Selenium WebDriver to extract and organize data from websites, allowing you to gain a competitive edge and stay ahead of the curve."
+      },
+      {
+        "icon": "bi bi-database-check",
+        "title": "Database Management and Integration",
+        "description": "Manage your data effectively with my database management and integration services. Whether you need help designing a database schema, optimizing query performance, or integrating databases into your applications, I've got the expertise to help you succeed."
+      },
+      {
+        "icon": "bi bi-git",
+        "title": "Git and Version Control",
+        "description": "Collaborate with confidence using Git and GitHub. I provide training and support in version control best practices, helping you manage code changes, track progress, and collaborate effectively with your team."
+      }
+    ]
+  },
+  "contact": {
+    "intro": "Have a question or just want to say hello? Feel free to get in touch using the contact form below. I'll do my best to get back to you as soon as possible.",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47334.47096015077!2d24.723192425018592!3d42.141631523901594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd108a248763d%3A0x6470d1fa6f1338a0!2sPlovdiv!5e0!3m2!1sen!2sbg!4v1717141470102!5m2!1sen!2sbg"
+  }
+}
+
